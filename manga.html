@@ -97,6 +97,7 @@
             height: 400px;
             background-size: cover;
             background-position: center;
+            text-decoration: none; /* Remove underline from links */
         }
         
         .chapter-card::before {
@@ -150,22 +151,6 @@
             margin: 0.3rem 0;
         }
         
-        .read-button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: var(--purple);
-            color: var(--ghost);
-            text-decoration: none;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-            align-self: flex-start;
-        }
-        
-        .read-button:hover {
-            background: var(--blood);
-            transform: scale(1.05);
-        }
-        
         /* Individual Chapter Backgrounds */
         .chapter-1 {
             background-image: url('images/ch1.jpg');
@@ -209,7 +194,7 @@
         
         <div class="manga-grid">
             <!-- Chapter 1 -->
-            <div class="chapter-card chapter-1">
+            <a href="CHAPTER 1 THE FIRST STEP.pdf" class="chapter-card chapter-1 haunted">
                 <div class="chapter-content">
                     <div>
                         <h2 class="chapter-title">CHAPTER 1</h2>
@@ -221,12 +206,11 @@
                         </div>
                         <p>The world sleeps while unseen forces govern our reality. One man awakens to the truth.</p>
                     </div>
-                    <a href="CHAPTER 1 THE FIRST STEP.pdf" class="read-button haunted">READ NOW</a>
                 </div>
-            </div>
+            </a>
             
             <!-- Chapter 2 -->
-            <div class="chapter-card chapter-2">
+            <a href="chapter 2_merged.pdf" class="chapter-card chapter-2 haunted">
                 <div class="chapter-content">
                     <div>
                         <h2 class="chapter-title">CHAPTER 2</h2>
@@ -238,12 +222,11 @@
                         </div>
                         <p>The protagonist discovers his powers, but at what cost? The shadows begin to notice him.</p>
                     </div>
-                    <a href="chapter 2_merged.pdf" class="read-button haunted">PREVIEW</a>
                 </div>
-            </div>
+            </a>
             
             <!-- Chapter 3 -->
-            <div class="chapter-card chapter-3">
+            <a href="chapter 3_merged.pdf" class="chapter-card chapter-3 haunted">
                 <div class="chapter-content">
                     <div>
                         <h2 class="chapter-title">CHAPTER 3</h2>
@@ -255,9 +238,8 @@
                         </div>
                         <p>The first confrontation with the forces that control our world. Will he survive the encounter?</p>
                     </div>
-                    <a href="chapter 3_merged.pdf" class="read-button haunted">LEARN MORE</a>
                 </div>
-            </div>
+            </a>
         </div>
     </main>
 
