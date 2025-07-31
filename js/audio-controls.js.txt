@@ -1,0 +1,31 @@
+// audio-controls.js
+
+// Function to play or pause background audio
+function toggleAudio() {
+    const audio = document.getElementById('background-audio');
+    const playButton = document.getElementById('audio-play-button');
+
+    if (audio.paused) {
+        audio.play();
+        playButton.textContent = 'Pause Audio'; // Change button text to 'Pause'
+    } else {
+        audio.pause();
+        playButton.textContent = 'Play Audio'; // Change button text to 'Play'
+    }
+}
+
+// Event listener for audio play/pause button
+document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('audio-play-button');
+    if (playButton) {
+        playButton.addEventListener('click', toggleAudio);
+    }
+});
+
+// Optional: Set initial audio settings
+const audio = document.getElementById('background-audio');
+if (audio) {
+    audio.volume = 0.5; // Set initial volume
+    audio.loop = true; // Loop the audio
+    audio.play(); // Start playing audio
+}

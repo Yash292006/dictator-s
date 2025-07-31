@@ -1,0 +1,32 @@
+/* ===== ANIMATIONS ===== */
+
+/* Flicker effect for haunted elements */
+@keyframes flicker {
+    0%, 100% { opacity: 0.9; text-shadow: 0 0 10px var(--blood); }
+    50% { opacity: 0.6; text-shadow: 0 0 15px var(--purple); }
+}
+
+/* Haunted class for hover effects */
+.haunted {
+    transition: all 0.3s ease;
+}
+
+.haunted:hover {
+    text-shadow: 0 0 8px var(--blood);
+    cursor: url('data:image/png;base64,iVBORw0KG...'), auto; /* Skull cursor in base64 */
+}
+
+/* Hero section animation */
+.hero h1 {
+    animation: flicker 4s infinite;
+}
+
+/* Button hover effect */
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--blood);
+    cursor: pointer;
+}

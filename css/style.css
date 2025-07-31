@@ -1,0 +1,120 @@
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --black: #0a0708;
+    --blood: #8a0303;
+    --purple: #3d246c;
+    --ghost: #e8e9eb;
+}
+
+body {
+    background: var(--black);
+    color: var(--ghost);
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    line-height: 1.6;
+    background-image: url('../images/backgrounds/texture.png');
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ===== LAYOUT ===== */
+header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--blood);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--ghost);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--blood);
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    background: transparent;
+    color: var(--ghost);
+    border: 1px solid var(--blood);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: var(--blood);
+}
+
+#dark-mode-toggle {
+    margin-top: 1rem;
+    background: transparent;
+    color: var(--ghost);
+    border: 1px solid var(--purple);
+    padding: 0.5rem 1rem;
+    font-family: 'EB Garamond', serif;
+    transition: all 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background: var(--purple);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

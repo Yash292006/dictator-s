@@ -1,0 +1,67 @@
+/* ===== DARK MODE STYLES ===== */
+
+body {
+    background: var(--black);
+    color: var(--ghost);
+}
+
+header {
+    border-bottom: 1px solid var(--blood);
+}
+
+nav a {
+    color: var(--ghost);
+}
+
+footer {
+    border-top: 1px solid var(--blood);
+}
+
+.hero h1 {
+    color: var(--ghost);
+}
+
+.hero p {
+    color: var(--ghost);
+}
+
+.cta-button {
+    background: transparent;
+    color: var(--ghost);
+    border: 1px solid var(--blood);
+}
+
+.cta-button:hover {
+    background: var(--blood);
+}
+
+.social-links a {
+    color: var(--ghost);
+}
+
+.social-links a:hover {
+    text-shadow: 0 0 8px var(--blood);
+}
+/* Light Mode Styles */
+[data-theme="light"] {
+    --black: #f5f5f5;
+    --ghost: #0a0708;
+    --blood: #d10000;
+    --purple: #5e43aa;
+}
+
+[data-theme="light"] body {
+    background-image: none;
+    background-color: var(--black);
+}
+
+/* Additional light mode adjustments */
+[data-theme="light"] .cta-button:hover,
+[data-theme="light"] .haunted:hover {
+    text-shadow: 0 0 8px var(--purple);
+}
+
+[data-theme="light"] header,
+[data-theme="light"] footer {
+    border-color: var(--purple);
+}

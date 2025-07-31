@@ -1,0 +1,53 @@
+// animations.js
+// Flicker animation for haunted elements
+document.querySelectorAll('.haunted').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        element.style.animation = 'flicker 0.5s';
+        setTimeout(() => {
+            element.style.animation = '';
+        }, 500);
+    });
+});
+
+// Function to play a sound effect on hover
+function playHoverSound() {
+    const whisperAudio = document.getElementById('whisper');
+    if (whisperAudio) {
+        whisperAudio.currentTime = 0; // Reset audio to start
+        whisperAudio.play(); // Play the audio
+    }
+}
+
+// Add event listeners for hover effects on haunted elements
+document.querySelectorAll('.haunted').forEach(item => {
+    item.addEventListener('mouseenter', playHoverSound);
+});
+
+// Optional: Add animations to elements on scroll
+const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+const handleScrollAnimation = () => {
+    animatedElements.forEach(el => {
+        if (isElementInViewport(el)) {
+            el.classList.add('fade-in'); // Add fade-in class when in viewport
+        }
+    });
+};
+
+// Listen for scroll events
+window.addEventListener('scroll', handleScrollAnimation);
+
+// Initialize animations on page load
+document.addEventListener('DOMContentLoaded', () => {
+    handleScrollAnimation(); // Check for elements already in viewport
+});

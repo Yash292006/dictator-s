@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Collection | DICTATOR WRITES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        :root {
+            --black: #0a0708;
+            --blood: #8a0303;
+            --purple: #3d246c;
+            --ghost: #e8e9eb;
+        }
+        
+        body {
+            background: var(--black);
+            color: var(--ghost);
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            line-height: 1.6;
+            background-image: url('https://example.com/path-to-texture.png');
+            background-attachment: fixed;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        /* ===== HAUNTED EFFECTS ===== */
+        @keyframes flicker {
+            0%, 100% { opacity: 0.9; text-shadow: 0 0 10px var(--blood); }
+            50% { opacity: 0.6; text-shadow: 0 0 15px var(--purple); }
+        }
+        
+        .haunted {
+            transition: all 0.3s ease;
+        }
+        
+        .haunted:hover {
+            text-shadow: 0 0 8px var(--blood);
+            cursor: url('data:image/png;base64,iVBORw0KG...'), auto;
+        }
+        
+        /* ===== LAYOUT ===== */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--blood);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--ghost);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        main {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--blood);
+        }
+        
+        /* ===== MANGA CHAPTER CONTAINERS ===== */
+        .manga-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .chapter-card {
+            position: relative;
+            border: 1px solid var(--blood);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 7, 8, 0.7);
+            z-index: 1;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(138, 3, 3, 0.5);
+        }
+        
+        .chapter-card:hover::before {
+            background: rgba(10, 7, 8, 0.5);
+        }
+        
+        .chapter-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .chapter-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--ghost);
+            text-shadow: 0 0 10px var(--blood);
+        }
+        
+        .chapter-subtitle {
+            font-style: italic;
+            color: var(--ghost);
+            margin-bottom: 1rem;
+        }
+        
+        .chapter-meta {
+            margin-bottom: 1.5rem;
+        }
+        
+        .chapter-meta p {
+            margin: 0.3rem 0;
+        }
+        
+        .read-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--purple);
+            color: var(--ghost);
+            text-decoration: none;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .read-button:hover {
+            background: var(--blood);
+            transform: scale(1.05);
+        }
+        
+        /* Individual Chapter Backgrounds */
+        .chapter-1 {
+            background-image: url('images/ch1.jpg');
+        }
+        
+        .chapter-2 {
+            background-image: url('images/CHAPTER 1 THE FIRST STEP_page-0017.jpg');
+        }
+        
+        .chapter-3 {
+            background-image: url('images/CHAPTER 1 THE FIRST STEP_page-0033.jpg');
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .manga-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chapter-card {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="haunted">HOME</a></li>
+                <li><a href="manga.html" class="haunted">MANGA</a></li>
+                <li><a href="about.html" class="haunted">ABOUT</a></li>
+                <li><a href="contact.html" class="haunted">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>THE DICTATOR'S MANIFESTO</h1>
+        <p class="subtitle">A psychological horror manga series</p>
+        
+        <div class="manga-grid">
+            <!-- Chapter 1 -->
+            <div class="chapter-card chapter-1">
+                <div class="chapter-content">
+                    <div>
+                        <h2 class="chapter-title">CHAPTER 1</h2>
+                        <h3 class="chapter-subtitle">The First Step</h3>
+                        <div class="chapter-meta">
+                            <p>Released: August 1, 2025</p>
+                            <p>Pages: 16</p>
+                            <p>Status: Available</p>
+                        </div>
+                        <p>The world sleeps while unseen forces govern our reality. One man awakens to the truth.</p>
+                    </div>
+                    <a href="CHAPTER 1 THE FIRST STEP.pdf" class="read-button haunted">READ NOW</a>
+                </div>
+            </div>
+            
+            <!-- Chapter 2 -->
+            <div class="chapter-card chapter-2">
+                <div class="chapter-content">
+                    <div>
+                        <h2 class="chapter-title">CHAPTER 2</h2>
+                        <h3 class="chapter-subtitle">The Awakening</h3>
+                        <div class="chapter-meta">
+                            <p>Coming: August 1, 2025</p>
+                            <p>Pages: ?</p>
+                            <p>Status: Available</p>
+                        </div>
+                        <p>The protagonist discovers his powers, but at what cost? The shadows begin to notice him.</p>
+                    </div>
+                    <a href="chapter 2_merged.pdf" class="read-button haunted">PREVIEW</a>
+                </div>
+            </div>
+            
+            <!-- Chapter 3 -->
+            <div class="chapter-card chapter-3">
+                <div class="chapter-content">
+                    <div>
+                        <h2 class="chapter-title">CHAPTER 3</h2>
+                        <h3 class="chapter-subtitle">The First Enemy</h3>
+                        <div class="chapter-meta">
+                            <p>Coming: August 1, 2025</p>
+                            <p>Pages: ?</p>
+                            <p>Status: Available</p>
+                        </div>
+                        <p>The first confrontation with the forces that control our world. Will he survive the encounter?</p>
+                    </div>
+                    <a href="chapter 3_merged.pdf" class="read-button haunted">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 dictator's  | All rights reserved</p>
+        <a href="https://x.com/Suprit_43?t=0Qqk5OW3ifOQBIHZhn83qw&s=08" class="haunted">Twitter</a> | 
+        <a href="https://www.instagram.com/suprit_vt?igsh=MTh3empnZ2l0aGhzcQ==" class="haunted">Instagram</a>
+    </footer>
+</body>
+</html>

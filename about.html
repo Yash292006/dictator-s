@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Supreet Vishnu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        :root {
+            --black: #0a0708;
+            --blood: #8a0303;
+            --purple: #3d246c;
+            --ghost: #e8e9eb;
+        }
+        
+        body {
+            background: var(--black);
+            color: var(--ghost);
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            line-height: 1.6;
+            background-image: url('https://example.com/path-to-texture.png');
+            background-attachment: fixed;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        /* ===== HAUNTED EFFECTS ===== */
+        @keyframes flicker {
+            0%, 100% { opacity: 0.9; text-shadow: 0 0 10px var(--blood); }
+            50% { opacity: 0.6; text-shadow: 0 0 15px var(--purple); }
+        }
+        
+        .haunted {
+            transition: all 0.3s ease;
+        }
+        
+        .haunted:hover {
+            text-shadow: 0 0 8px var(--blood);
+            cursor: url('data:image/png;base64,iVBORw0KG...'), auto;
+        }
+        
+        /* ===== LAYOUT ===== */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--blood);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--ghost);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        main {
+            min-height: 70vh;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--blood);
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        .author-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .author-portrait {
+            border: 3px solid var(--blood);
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(138, 3, 3, 0.3);
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(30%) contrast(110%);
+        }
+        
+        .author-bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .author-bio p:first-child::first-letter {
+            font-size: 2.5rem;
+            color: var(--blood);
+            float: left;
+            margin-right: 0.5rem;
+            line-height: 1;
+        }
+        
+        /* ===== OUIJA CONTACT FORM ===== */
+        .contact-form {
+            margin-top: 4rem;
+            border-top: 1px dashed var(--blood);
+            padding-top: 2rem;
+        }
+        
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .contact-form h2::after {
+            content: "✜";
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            color: var(--blood);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            background: transparent;
+            border: 1px solid var(--purple);
+            color: var(--ghost);
+            padding: 0.8rem;
+            width: 100%;
+            margin-bottom: 1rem;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+        }
+        
+        .contact-form button {
+            background: var(--purple);
+            color: var(--ghost);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background: var(--blood);
+            cursor: pointer;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .author-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .author-portrait {
+                max-width: 70%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER WITH NAVIGATION -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="haunted">HOME</a></li>
+                <li><a href="manga.html" class="haunted">MANGA</a></li>
+                <li><a href="contact.html" class="haunted">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- MAIN ABOUT SECTION -->
+    <main>
+        <section class="author-section">
+<img src="images/WhatsApp Image 2025-07-31 at 14.46.05_092e7f01.jpg" alt="DICTATOR WRITES" class="author-portrait">          
+  <div class="author-bio">
+                <h1>The Keeper of This House</h1>
+                <p>My life? Well... it's kind of like living in a haunted mansion. Shadows dance in the corners of my mind, strange stories echo through the halls, and you'll always find a little chill in the air around me — but that's just how I like it.</p>
+                <p>I'm a writer obsessed with the strange and spooky. When I'm not writing, I'm sketching the things that haunt my imagination — eerie faces, crumbling castles, dark forests, and creatures that watch from the shadows. My notebooks are like grim little museums of my nightmares... and my dreams.</p>
+                <p>And yes, I'm a gamer too — I dive into dark, mysterious worlds, chasing the thrill of the unknown and laughing at the jump scares along the way.</p>
+            </div>
+        </section>
+        
+    
+    </main>
+    
+    <!-- FOOTER -->
+    <footer>
+<p>© 2025 dictator's | All rights reserved</p>
+        <div class="social-links">
+            <a href="https://x.com/Suprit_43?t=0Qqk5OW3ifOQBIHZhn83qw&s=08 " class="haunted">Twitter</a> | 
+            <a href="https://www.instagram.com/suprit_vt?igsh=MTh3empnZ2l0aGhzcQ==" class="haunted">Instagram</a> 
+   
+        </div>
+    </footer>
+
+    <!-- OPTIONAL: GHOSTLY WHISPER EFFECT -->
+    <audio id="whisper" src="whisper.mp3" preload="auto"></audio>
+    <script>
+        document.querySelectorAll('.haunted').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.getElementById('whisper').currentTime = 0;
+                document.getElementById('whisper').play();
+            });
+        });
+    </script>
+</body>
+</html>
